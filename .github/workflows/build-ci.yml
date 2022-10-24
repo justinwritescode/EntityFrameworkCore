@@ -23,8 +23,8 @@ jobs:
       run: dotnet tool install -g dotnet-file
     - name: Download global.json
       run: dotnet file https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
-    - name Output contents of global.json
-      run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
+    #- name Output contents of global.json
+      #run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
     - name: Restore Central Files
       run: dotnet restore *.restoreproj -t:RestoreCentralFiles
     - name: Restore dependencies
