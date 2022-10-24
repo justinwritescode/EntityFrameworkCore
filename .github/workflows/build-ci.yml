@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: CI Build
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       uses: xt0rted/dotnet-tool-restore@v1
       
     - name: Download global.json
-      run: dotnet file https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
+      run: dotnet file add https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
       
     #- name Output contents of global.json
     #  run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
