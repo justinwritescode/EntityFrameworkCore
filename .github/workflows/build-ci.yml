@@ -20,15 +20,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-        
-    - name: Install dotnet tools
-      run: dotnet tool install -g "dotnet-file"
-      
-    - name: Download global.json
-      run: dotnet file add https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
+             
+    - name: Downloading global.json
+      run: curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > global.json
       
     #- name Output contents of global.json
-    #  run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
+      #run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
       
     - name: Restore Central Files
       run: dotnet restore *.restoreproj -t:RestoreCentralFiles
