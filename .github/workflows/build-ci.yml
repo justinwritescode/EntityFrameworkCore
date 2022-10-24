@@ -19,9 +19,9 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
     - name: Restore Central Files
       run: dotnet restore *.restoreproj -t:RestoreCentralFiles
+    - run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
     - name: Restore dependencies
       run: dotnet restore *.slnproj
     - name: Restore Central Files
