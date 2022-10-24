@@ -20,6 +20,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+      
+    - name: List NuGet Sources
+      run: dotnet nuget list source;
+      
+    - name: Print the working directory
+      run: pwd;
              
     - name: Downloading global.json
       run: sudo curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > ./global.json
