@@ -20,10 +20,10 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-namespace JustinWritesCode.EntityFrameworkCore.Abstractions
-{
-    /// <summary>
-    /// An interface for a database entity without timestamps
-    /// </summary>
-    public interface IEntityWithoutTimestamps : IHaveAWritableId { }
-}
+using JustinWritesCode.Abstractions;
+namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
+using JustinWritesCode.Abstractions;
+/// <summary>
+/// An interface for a database entity without timestamps
+/// </summary>
+public interface IEntityWithoutTimestamps : IHaveAWritableId { }

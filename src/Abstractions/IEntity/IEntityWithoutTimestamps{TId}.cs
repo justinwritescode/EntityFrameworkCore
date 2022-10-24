@@ -20,8 +20,8 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-namespace JustinWritesCode.EntityFrameworkCore.Abstractions
-{
+namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
+using JustinWritesCode.Abstractions;
     /// <summary>
     /// <inheritdoc  cref="IEntityWithoutTimestamps" />
     /// </summary>
@@ -30,5 +30,4 @@ namespace JustinWritesCode.EntityFrameworkCore.Abstractions
          where TId : IComparable, IEquatable<TId>
     {
 
-    }
 }

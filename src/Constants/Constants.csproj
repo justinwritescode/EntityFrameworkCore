@@ -5,7 +5,7 @@
     <IsNuGetized>true</IsNuGetized>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableCentralPackageVersions>true</EnableCentralPackageVersions>
-    <ImportFluentBuilder>false</ImportFluentBuilder>
+    <EnableFluentBuilder>false</EnableFluentBuilder>
   </PropertyGroup>
   <ItemGroup>
   </ItemGroup>
