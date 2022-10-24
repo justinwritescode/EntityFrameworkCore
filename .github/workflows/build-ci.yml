@@ -27,19 +27,19 @@ jobs:
     needs: checkout
     steps:
     - name: Restore Central Files
-      run: dotnet build *.restoreproj -t:RestoreCentralFiles
+      run: dotnet restore *.restoreproj -t:RestoreCentralFiles
   restore:
     runs-on: ubuntu-latest
     needs: checkout
     steps:
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore *.slnproj
   build:
     runs-on: ubuntu-latest
-    needs: restore
+    needs: [ checkout, setup-dotnet, restore-central-files, restore ]
     steps:
-    - name: Build
-      run: dotnet build --no-restore *.slnproj
+    - name: Restore Central Files
+      run: dotnet build  --no-restore *.slnproj
   test:
     runs-on: ubuntu-latest
     needs: build
