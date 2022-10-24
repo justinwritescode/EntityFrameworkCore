@@ -5,6 +5,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="ProxyInterfaceGenerator" />
-    <PackageReference Include="JustinWritesCode.Abstractions" />
+    <PackageReference Include="JustinWritesCode.Abstractionss" />
   </ItemGroup>
 </Project>
