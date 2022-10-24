@@ -25,7 +25,7 @@ jobs:
       run: dotnet tool restore
       
     - name: Download global.json
-      run: dotnet-file add https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
+      run: dotnet file add https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
       
     #- name Output contents of global.json
     #  run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
