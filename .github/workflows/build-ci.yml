@@ -22,7 +22,7 @@ jobs:
         dotnet-version: 6.0.x
         
     - name: Install dotnet tools
-      uses: xt0rted/dotnet-tool-restore@v1
+      run: dotnet tool restore
       
     - name: Download global.json
       run: dotnet-file add https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
