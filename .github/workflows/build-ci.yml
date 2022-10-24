@@ -15,21 +15,29 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Install dotnet-file tool
-      run: dotnet tool install --global dotnet-file --version 1.4.0
+        
+    - name: Install dotnet tools
+      uses: xt0rted/dotnet-tool-restore@v1
+      
     - name: Download global.json
       run: dotnet file https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
+      
     #- name Output contents of global.json
-      #run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
+    #  run: cat /home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json
+      
     - name: Restore Central Files
       run: dotnet restore *.restoreproj -t:RestoreCentralFiles
+      
     - name: Restore dependencies
       run: dotnet restore *.slnproj
+      
     - name: Restore Central Files
       run: dotnet build  --no-restore *.slnproj
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
