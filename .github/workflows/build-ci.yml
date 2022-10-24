@@ -22,7 +22,7 @@ jobs:
         dotnet-version: 6.0.x
              
     - name: Downloading global.json
-      run: curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > ${{env.GITHUB_WORKSPACE}}/global.json
+      run: sudo curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > ${{env.GITHUB_WORKSPACE}}/global.json
       
     #- name Output contents of global.json
       #run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
