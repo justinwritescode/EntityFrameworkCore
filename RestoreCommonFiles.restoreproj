@@ -8,7 +8,9 @@
      <PackageReference Include="JustinWritesCode.SharedFiles" Version="0.0.8" />
     </ItemGroup>
     <Target Name="Foo" AfterTargets="RestoreSharedFiles">
-      <Message Text="@(RestoreFile->'%(RestorePath)', ' 
+      <Message Text="@(Content->'%(RestorePath)', ' 
+')" Importance="High" />
+      <Message Text="@(Content->'%(RestorePath)', ' 
 ')" Importance="High" />
       <ItemGroup>
         <PackageFolder Include="@(RestoreFile->'%(Folder)')" />
