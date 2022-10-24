@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Install dotnet-file tool
-      run: dotnet tool install -g dotnet-file
+      run: dotnet tool install --global dotnet-file --version 1.4.0
     - name: Download global.json
       run: dotnet file https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json
     #- name Output contents of global.json
