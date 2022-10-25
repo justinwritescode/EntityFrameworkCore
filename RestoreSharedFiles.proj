@@ -3,6 +3,13 @@
     <TargetFramework>netstandard1.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JustinWritesCode.SharedFilesRestorer" IncludeAssets="Build" PrivateAssets="All" />
+    <PackageReference Update="JustinWritesCode.SharedFilesRestorer" 
+                      Version="$(JustinWritesCodeSharedFilesRestorerVersion)" 
+                      Condition="'$(JustinWritesCodeSharedFilesRestorerVersion)' != ''"
+                      IncludeAssets="Build" PrivateAssets="All" />
+    <PackageReference Update="JustinWritesCode.SharedFilesRestorer" 
+                      Version="[0.0.1,)" 
+                      Condition="'$(JustinWritesCodeSharedFilesRestorerVersion)' != ''"
+                      IncludeAssets="Build" PrivateAssets="All" />
   </ItemGroup>
 </Project>
