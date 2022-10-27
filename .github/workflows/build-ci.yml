@@ -43,7 +43,7 @@ jobs:
       run: dotnet restore *.restoreproj -t:RestoreCentralFiles
       
     - name: List the directory contents
-      run: ls;
+      run: ls Directory.Build;
       
     - name: Print the working directory
       run: pwd;
