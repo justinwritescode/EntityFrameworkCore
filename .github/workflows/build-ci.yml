@@ -45,7 +45,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore *.slnproj
       
-    - name: Restore Central Files
+    - name: Build the Solution
       run: dotnet build  --no-restore *.slnproj
       
     - name: Test
