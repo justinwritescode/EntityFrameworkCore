@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./src/**/*.*proj" />
   </ItemGroup>
