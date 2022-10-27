@@ -1,7 +1,7 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: CI Build
 
 on:
   push:
@@ -11,18 +11,42 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
+      
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+      
+    - name: List NuGet Sources
+      run: dotnet nuget list source;
+      
+    - name: Add GitHub Packages NuGet source
+      run: dotnet nuget add source "https://nuget.pkg.github.com/justinwritescode/index.json" --name GitHub --username justinwritescode --password ${{secrets.GIT_TOKEN}} --store-password-in-clear-text
+      
+    - name: List NuGet Sources
+      run: dotnet nuget list source;
+      
+    - name: Print the working directory
+      run: pwd;
+             
+    - name: Downloading global.json
+      run: sudo curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > ./global.json
+      
+    #- name Output contents of global.json
+      #run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
+      
+    - name: Restore Central Files
+      run: dotnet restore *.restoreproj -t:RestoreCentralFiles
+      
     - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
+      run: dotnet restore *.slnproj
+      
+    - name: Restore Central Files
+      run: dotnet build  --no-restore *.slnproj
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
