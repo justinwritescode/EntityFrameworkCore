@@ -1,5 +1,5 @@
 namespace JustinWritesCode.EntityFrameworkCore.Extensions;
-using static System.RandomV2;
+using static System.Randoms;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.ValueGeneration;
 
