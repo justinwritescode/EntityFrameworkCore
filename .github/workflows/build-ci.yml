@@ -27,6 +27,9 @@ jobs:
     - name: Add GitHub Packages NuGet source
       run: dotnet nuget add source "https://nuget.pkg.github.com/justinwritescode/index.json" --name GitHub --username justinwritescode --password ${{secrets.GIT_TOKEN}} --store-password-in-clear-text
       
+    - name: Add Azure Artifacts NuGet source
+      run: dotnet nuget add source "https://pkgs.dev.azure.com/justinwritescode/_packaging/justinwritescode/nuget/v3/index.json" --name Azure --username justin@thebackroom.app --password ${{secrets.AZURE_PAT}} --store-password-in-clear-text
+      
     - name: List NuGet Sources
       run: dotnet nuget list source;
       
