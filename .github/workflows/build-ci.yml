@@ -40,7 +40,7 @@ jobs:
       #run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
       
     - name: Restore Central Files
-      run: dotnet restore *.restoreproj -t:RestoreCentralFiles --configuration Release
+      run: dotnet restore *.restoreproj -t:RestoreCentralFiles
       
     - name: List the directory contents
       run: ls Directory.Build;
