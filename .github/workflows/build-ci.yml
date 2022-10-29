@@ -37,10 +37,10 @@ jobs:
       run: sudo curl https://raw.githubusercontent.com/justinwritescode/justinwritescode/main/global.json > ./global.json
       
     #- name Output contents of global.json
-      #run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
+    #  run: cat "/home/runner/work/EntityFrameworkCore/EntityFrameworkCore/global.json"
       
     - name: Restore Central Files
-      run: dotnet restore *.restoreproj -t:RestoreCentralFiles
+      run: dotnet build *.restoreproj -t:RestoreCentralFiles
       
     - name: List the directory contents
       run: ls Directory.Build;
@@ -48,11 +48,11 @@ jobs:
     - name: Print the working directory
       run: pwd;
       
-    - name: Restore dependencies
-      run: dotnet restore *.slnproj
+    #- name: Restore dependencies
+    #  run: dotnet restore *.slnproj
       
     - name: Build the Solution
-      run: dotnet build  --no-restore *.slnproj --configuration Release
+      run: dotnet build *.slnproj --configuration Release
       
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
