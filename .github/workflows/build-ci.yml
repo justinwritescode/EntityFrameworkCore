@@ -62,3 +62,26 @@ jobs:
       
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal --configuration Release
+    
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+      # Artifact name
+        name: nuget-packages
+        # A file, directory or wildcard pattern that describes what to upload
+        path: 
+          ./artifacts/*.nupkg
+    
+  push-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.1
+        with:
+          # Artifact name
+          name: nuget-packages
+          # Destination path
+          path: ./artifacts
+      - name: Push-GitHub
+        run: dotnet nuget push ./artifacts/*.nupkg --source GitHub
+      
