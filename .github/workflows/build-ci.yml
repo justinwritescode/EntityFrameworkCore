@@ -83,6 +83,8 @@ jobs:
           name: nuget-packages
           # Destination path
           path: ./artifacts
+      - name: Add GitHub Packages NuGet source
+        run: dotnet nuget add source "https://nuget.pkg.github.com/justinwritescode/index.json" --name GitHub --username justinwritescode --password ${{secrets.GIT_TOKEN}} --store-password-in-clear-text
       - name: Push-GitHub
         run: dotnet nuget push ./artifacts/*.nupkg --source GitHub
       
