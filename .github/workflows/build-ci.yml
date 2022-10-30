@@ -73,6 +73,7 @@ jobs:
           ./artifacts/*.nupkg
     
   push-github:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download a Build Artifact
