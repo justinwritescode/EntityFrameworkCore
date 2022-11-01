@@ -1,3 +1,15 @@
+<!--
+ Constants.csproj
+ 
+   Created: 2022-10-22-10:30:32
+   Modified: 2022-10-29-08:13:00
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +18,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableCentralPackageVersions>true</EnableCentralPackageVersions>
     <EnableFluentBuilder>false</EnableFluentBuilder>
+    <AssemblyName>JustinWritesCode.EntityFrameworkCore.Constants</AssemblyName>
+    <PackageId>$(AssemblyName)</PackageId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="JustinWritesCode.Enumerations.CodeGeneration" IncludeAssets="Analyzers" PrivateAssets="All" />
   </ItemGroup>
 </Project>
