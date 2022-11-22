@@ -1,0 +1,34 @@
+<!--
+ * JustinWritesCode.EntityFrameworkCore.Abstractions.csproj
+ * 
+ *   Created: 2022-10-18-10:51:28
+ *   Modified: 2022-11-11-07:21:06
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+    <AssemblyName>JustinWritesCode.EntityFrameworkCore.Abstractions</AssemblyName>
+    <PackageId>$(AssemblyName)</PackageId>
+    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+  </PropertyGroup>
+  <ItemGroup>
+    <Author Include="Municipal Drew" Email="drew@wheatleythecat.com" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Usings" />
+    <PackageReference Include="ProxyInterfaceGenerator" IncludeAssets="build;  analyzers;" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local'">
+    <ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' != 'Testing' And '$(Configuration)' != 'Local'">
+    <PackageReference Include="JustinWritesCode.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="./JustinWritesCode.EntityFrameworkCore.Abstractions.props" PackagePath="build/%(Filename)%(Extension)" />
+  </ItemGroup>
+  </Project>

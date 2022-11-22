@@ -1,25 +1,17 @@
-﻿//
-//  IHaveTimestamps.cs
-//
-//  Authors:
-//       Justin Chase <justin@thebackroom.app>
-//       Municipal Drew <drew@wheatleythecat.com>
-//
-//  Copyright ©️ 2022 The Backroom, Justin Chase, & Municipal Drew
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+﻿/*
+ * IHaveTimestamps.cs
+ *
+ *   Created: 2022-10-23-04:33:44
+ *   Modified: 2022-11-12-09:06:09
+ *
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
+
+
 using System;
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 
-public interface IHaveTimestamps<TUserId> : IHaveACreatedDate<TUserId>, IHaveAnUpdatedDate<TUserId>, IHaveADeletedDate<TUserId> { }
+public interface ITimestampable<TUserId> : ICreatable<TUserId>, IUpdatable<TUserId>, IDeletable<TUserId> { }

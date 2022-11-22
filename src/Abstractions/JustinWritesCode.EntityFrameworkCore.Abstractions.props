@@ -1,0 +1,16 @@
+<!--
+ * JustinWritesCode.EntityFrameworkCore.Abstractions.props
+ * 
+ *   Created: 2022-11-11-07:14:46
+ *   Modified: 2022-11-11-07:14:46
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemGroup>
+    <Using Include="JustinWritesCode.EntityFrameworkCore.Abstractions" />
+  </ItemGroup>
+</Project>

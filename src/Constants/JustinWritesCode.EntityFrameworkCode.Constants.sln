@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.EntityFrameworkCode.Constants", "JustinWritesCode.EntityFrameworkCode.Constants.csproj", "{4B183B92-4B3E-44A3-857E-5396E2C247F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8BB19BB-6FB2-4C2A-B6DB-48A8B28FE83B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Local|Any CPU.Build.0 = Local|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B183B92-4B3E-44A3-857E-5396E2C247F9} = {B8BB19BB-6FB2-4C2A-B6DB-48A8B28FE83B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89FED99A-9BE5-468A-9A78-F23306B9D3B9}
+	EndGlobalSection
+EndGlobal

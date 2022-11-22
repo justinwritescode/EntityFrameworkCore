@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.EntityFrameworkCode.Extensions", "JustinWritesCode.EntityFrameworkCode.Extensions.csproj", "{E7A76EDC-C268-4225-A761-E949AEEBEC0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5082B59-27F8-448E-9DDA-8F8D98D6AD74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Local|Any CPU.Build.0 = Local|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7A76EDC-C268-4225-A761-E949AEEBEC0B} = {F5082B59-27F8-448E-9DDA-8F8D98D6AD74}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC475B56-3640-462D-94DF-047EC5C5DD4A}
+	EndGlobalSection
+EndGlobal
