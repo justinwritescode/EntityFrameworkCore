@@ -5,5 +5,5 @@ namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 /// </summary>
 public interface IHaveADbContext
 {
-    IDbContext Db { get; }
+    DbContext Db { get; }
 }

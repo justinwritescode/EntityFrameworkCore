@@ -4,7 +4,7 @@ namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 /// <inheritdoc cref="IHaveADbContext" />
 /// </summary>
 /// <typeparam name="TContext">The type of the database context</typeparam>
-public interface IHaveADbContext<out TContext> : IHaveADbContext where TContext : IDbContext
+public interface IHaveADbContext<out TContext> : IHaveADbContext where TContext : DbContext
 {
     new TContext Db { get; }
 }

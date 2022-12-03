@@ -1,0 +1,20 @@
+<!--
+ * JustinWritesCode.EntityFrameworkCode.Constants.props
+ * 
+ *   Created: 2022-10-22-01:30:32
+ *   Modified: 2022-11-19-04:06:43
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemGroup>
+    <Using Include="JustinWritesCode.EntityFrameworkCore" />
+    <Using Include="JustinWritesCode.EntityFrameworkCore.Constants" Static="true" />
+    <Using Include="JustinWritesCode.EntityFrameworkCore.Constants.DbTypeNames" Static="true" />
+    <Using Include="JustinWritesCode.EntityFrameworkCore.Constants.Schemas" Static="true" />
+  </ItemGroup>
+</Project>
