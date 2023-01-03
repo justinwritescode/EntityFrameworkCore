@@ -13,7 +13,7 @@
 <Project>
   <ItemGroup>
     <Using Include="JustinWritesCode.EntityFrameworkCore" />
-    <Using Include="JustinWritesCode.EntityFrameworkCore.Constants" Static="true" />
+    <Using Include="JustinWritesCode.EntityFrameworkCore.Constants"  />
     <Using Include="JustinWritesCode.EntityFrameworkCore.Constants.DbTypeNames" Static="true" />
     <Using Include="JustinWritesCode.EntityFrameworkCore.Constants.Schemas" Static="true" />
   </ItemGroup>

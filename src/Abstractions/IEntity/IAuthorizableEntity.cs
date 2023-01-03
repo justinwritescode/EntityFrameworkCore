@@ -1,8 +1,8 @@
 /*
- * IEntity.cs
+ * IAuthorizableEntity.cs
  *
- *   Created: 2023-01-03-12:28:16
- *   Modified: 2023-01-03-12:28:16
+ *   Created: 2023-01-03-12:29:17
+ *   Modified: 2023-01-03-12:29:17
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
@@ -12,6 +12,9 @@
 
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 
-public interface IEntity : IIdentifiable
+using System.Security.Claims;
+
+public interface IAuthorizableEntity : IEntity
 {
+    public bool CanDo(ClaimsPrincipal principal, string operation);
 }

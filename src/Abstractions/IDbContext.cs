@@ -10,21 +10,32 @@
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
 
-namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
+namespace Microsoft.EntityFrameworkCore.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 
 /// <summary>
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
 /// </summary>
-[ProxyInterfaceGenerator.Proxy(typeof(Microsoft.EntityFrameworkCore.DbContext))]
+[GenerateInterfaceAttribute(typeof(DbContext))]
 public partial interface IDbContext
 {
+#if NET6_0_OR_GREATER
+    /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
+    /// <returns>The default configuration key for the DbContext's configuration string.</returns>
+    public static abstract string DefaultConnectionStringConfigurationKey { get; } //=> "Db";
+#endif
 }
 
 /// <summary>
 /// Interface for a database context.  Implements all public properties and methods of <see cref="DbContext"/>.
 /// </summary>
-public interface IDbContext<TSelf> : IDbContext where TSelf : DbContext
+public interface IDbContext<TSelf> : IDbContext where TSelf : IDbContext, IDbContext<TSelf>
 {
+#if NET6_0_OR_GREATER
+    /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
+    /// <returns>The default configuration key for the DbContext's configuration string.</returns>
+    public abstract string DefaultConnectionStringConfigurationKey { get; } /*=>
+        typeof(TSelf).Name.Replace("Context", string.Empty, StringComparison.OrdinalIgnoreCase);*/
+#endif
 }

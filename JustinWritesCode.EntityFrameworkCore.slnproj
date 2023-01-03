@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./src/Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.csproj" />
+    <ProjectReference Include="./src/Constants/JustinWritesCode.EntityFrameworkCore.Constants.csproj" />
+    <ProjectReference Include="./src/Extensions/JustinWritesCode.EntityFrameworkCore.Extensions.csproj" />
+  </ItemGroup>
+  <Target Name="SaveVersionNumberCentrally">
+    <Message Text="Skipping..." />
+  </Target>
+</Project>

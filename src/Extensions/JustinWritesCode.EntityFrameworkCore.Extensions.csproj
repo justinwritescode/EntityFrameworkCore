@@ -12,8 +12,8 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+    <!-- <TargetFramework>netstandard2.0</TargetFramework> -->
     <AssemblyName>JustinWritesCode.EntityFrameworkCore.Extensions</AssemblyName>
     <PackageId>$(AssemblyName)</PackageId>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
@@ -21,7 +21,13 @@
   <ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
-    <PackageReference Include="JustinWritesCode.System.Extensions" />
-    <PackageReference Include="JustinWritesCode.Abstractions"  ExcludeAssets="ContentFiles" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="System.Text.Json" />
+    <PackageReference Include="System.Text.Json.Usings" />
+    <PackageReference Include="JustinWritesCode.System.Extensions" VersionOverride="0.0.1-Local" />
+    <PackageReference Include="JustinWritesCode.Abstractions" />
+    <!-- <ProjectReference Include="../../../Types/src/Extensions/JustinWritesCode.System.Extensions.csproj" />
+    <ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" /> -->
   </ItemGroup>
 </Project>

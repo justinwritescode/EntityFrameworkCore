@@ -1,6 +1,3 @@
 namespace JustinWritesCode.EntityFrameworkCore;
 
-public static partial class Constants
-{
-
-}
+// public static partial class Constants { }

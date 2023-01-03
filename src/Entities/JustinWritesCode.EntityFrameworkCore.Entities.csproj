@@ -1,0 +1,27 @@
+<!--
+ * JustinWritesCode.EntityFrameworkCore.Entities.csproj
+ * 
+ *   Created: 2022-12-21-01:35:09
+ *   Modified: 2022-12-21-01:35:09
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks> -->
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- <ItemGroup Condition="'$(Configuration)' == 'Testing' Or '$(Configuration)' == 'Local'">
+    <ProjectReference Include="../../../Types/src/Core/Abstractions/JustinWritesCode.Abstractions.csproj" />
+    <ProjectReference Include="../Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.csproj" />
+  </ItemGroup> -->
+  <ItemGroup>
+    <PackageReference Include="JustinWritesCode.Abstractions" />
+    <PackageReference Include="JustinWritesCode.EntityFrameworkCore.Abstractions" />
+  </ItemGroup>
+</Project>

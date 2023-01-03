@@ -1,19 +1,18 @@
 /*
- * IEntity{TId}.cs
+ * IEntity.cs
  *
- *   Created: 2022-10-23-04:33:44
- *   Modified: 2022-11-12-09:06:39
+ *   Created: 2023-01-03-12:27:21
+ *   Modified: 2023-01-03-12:27:22
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
-using JustinWritesCode.Abstractions;
-    /// <inheritdoc cref="IEntity" />
-    /// <typeparam name="TId"><inheritdoc cref="IEntityWithoutTimestamps{TId}"/></typeparam>
-    public interface IEntity<TId> : IEntityWithoutTimestamps<TId>, IEntity where TId : IComparable, IEquatable<TId>
+namespace  JustinWritesCode.EntityFrameworkCore.Abstractions;
+
+public interface IEntity<TId> : IIdentifiable<TId> where TId : IComparable, IEquatable<TId>
 {
+
 }

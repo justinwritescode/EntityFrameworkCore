@@ -8,9 +8,7 @@ public interface ITimestamp
     /// <value>The ID of the user who made the change</value>
     object? By { get; set; }
     /// <value>The <see cref="DateTime"/> of the change</value>
-    DateTime When { get; set; }
-    /// <value>An <see cref="IDictionary{string, object}"/> of the details of the change (if any)</value>
-    IDictionary<string, object> Details { get; set; }
-    /// <value>The ROWVERSION/TIMESTAMP of the change (if any)</value>
-    byte[] Version { get; set; }
+    DateTimeOffset When { get; set; }
+    /// <value>An <see cref="IStringDictionary"/> of the details of the change (if any)</value>
+    IStringDictionary Details { get; set; }
 }
