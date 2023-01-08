@@ -6,7 +6,7 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
@@ -15,7 +15,7 @@ namespace JustinWritesCode.EntityFrameworkCore.Abstractions
 	/// <summary>
 	/// An interface for an entity including timestamps for <see cref="ICreatable.Created"/>, <see cref="IUpdatable.Updated"/>, and <see cref="IDeletable.Deleted"/>
 	/// </summary>
-	public interface ITimestampedEntity : IEntityWithoutTimestamps, ITimestampable
+	public interface ITimestampedEntity : IEntity, ITimestampable
     {
     }
 }

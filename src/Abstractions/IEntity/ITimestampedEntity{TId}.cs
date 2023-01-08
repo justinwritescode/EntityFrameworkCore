@@ -6,14 +6,14 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 using JustinWritesCode.Abstractions;
-    /// <inheritdoc cref="ITimestampedTimestampedEntity" />
-    /// <typeparam name="TId"><inheritdoc cref="IEntityWithoutTimestamps{TId}"/></typeparam>
-    public interface ITimestampedEntity<TId> : IEntityWithoutTimestamps<TId>, ITimestampedEntity where TId : IComparable, IEquatable<TId>
+    /// <inheritdoc cref="ITimestampedEntity" />
+    /// <typeparam name="TId"><inheritdoc cref="IEntity{TId}"/></typeparam>
+    public interface ITimestampedEntity<TId> : IEntity<TId>, ITimestampedEntity where TId : IComparable, IEquatable<TId>
 {
 }

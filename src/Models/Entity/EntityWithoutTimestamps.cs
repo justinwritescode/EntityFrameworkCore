@@ -28,12 +28,12 @@ using JustinWritesCode.EntityFrameworkCore.Abstractions;
 /// This is an abstract base class for all Entity Framework entities.
 /// </summary>
 /// <typeparam name="TId">The type of the ID (primary key) property.</typeparam>
-public abstract class EntityWithoutTimestamps : IEntityWithoutTimestamps, IEquatable<IEntityWithoutTimestamps>, IComparable<IEntityWithoutTimestamps>, IComparable
+public abstract class Entity : IEntity, IEquatable<IEntity>, IComparable<IEntity>, IComparable
 {
     public virtual object Id { get; set; }
 
-    public abstract int CompareTo(IEntityWithoutTimestamps? other);
+    public abstract int CompareTo(IEntity? other);
     public abstract int CompareTo(object? obj);
-    public virtual bool Equals(IEntityWithoutTimestamps? other) => GetHashCode() == other?.GetHashCode();
+    public virtual bool Equals(IEntity? other) => GetHashCode() == other?.GetHashCode();
     public override int GetHashCode() => Id.GetHashCode();
 }

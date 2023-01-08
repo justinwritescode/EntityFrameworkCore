@@ -16,5 +16,4 @@ using System.Security.Claims;
 
 public interface IAuthorizableEntity<TId> : IEntity<TId>, IAuthorizableEntity where TId : IComparable, IEquatable<TId>
 {
-    bool CanDo(ClaimsPrincipal user, string action);
 }

@@ -6,13 +6,13 @@
  *
  *   Author: Justin Chase <justin@justinwritescode.com>
  *
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions
 {
     /// <summary>
-    /// <inheritdoc cref="ITimestampedTimestampedEntity" />
+    /// <inheritdoc cref="ITimestampedEntity" />
     /// </summary>
     /// <typeparam name="TId"><inheritdoc cref="ITimestampedEntity{TId}"/></typeparam>
     /// <typeparam name="TUserId">The type of the user ID</typeparam>

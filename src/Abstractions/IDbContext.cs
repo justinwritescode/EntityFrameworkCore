@@ -6,7 +6,7 @@
 //
 //   Author: Justin Chase <justin@justinwritescode.com>
 //
-//   Copyright © 2022 Justin Chase, All Rights Reserved
+//   Copyright © 2022-2023 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
 //
 
@@ -21,9 +21,9 @@ using Microsoft.EntityFrameworkCore;
 public partial interface IDbContext
 {
 #if NET6_0_OR_GREATER
-    /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
-    /// <returns>The default configuration key for the DbContext's configuration string.</returns>
-    public static abstract string DefaultConnectionStringConfigurationKey { get; } //=> "Db";
+    // /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
+    // /// <returns>The default configuration key for the DbContext's configuration string.</returns>
+    // public static abstract string DefaultConnectionStringConfigurationKey { get; } //=> "Db";
 #endif
 }
 
@@ -33,9 +33,9 @@ public partial interface IDbContext
 public interface IDbContext<TSelf> : IDbContext where TSelf : IDbContext, IDbContext<TSelf>
 {
 #if NET6_0_OR_GREATER
-    /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
-    /// <returns>The default configuration key for the DbContext's configuration string.</returns>
-    public abstract string DefaultConnectionStringConfigurationKey { get; } /*=>
-        typeof(TSelf).Name.Replace("Context", string.Empty, StringComparison.OrdinalIgnoreCase);*/
+    // /// <summary>Retrieves the default configuration key for the DbContext's configuration string.</summary>
+    // /// <returns>The default configuration key for the DbContext's configuration string.</returns>
+    // static string IDbContext.DefaultConnectionStringConfigurationKey =>
+    //     typeof(TSelf).Name.Replace("Context", string.Empty, StringComparison.OrdinalIgnoreCase);
 #endif
 }

@@ -29,18 +29,18 @@ using JustinWritesCode.EntityFrameworkCore.Abstractions;
 /// </summary>
 /// <typeparam name="TId">The type of the ID (primary key) property.</typeparam>
 /// <typeparam name="TUserId">The type of the user ID (for the <see cref="ITimestamp{TUserId}"/></typeparam>
-public abstract class Entity<TId, TUserId> : Entity<TId>, IEntity<TId, TUserId>, IEquatable<IEntity<TId>>, IComparable<IEntity<TId>>
+public abstract class TimestampedEntity<TId, TUserId> : TimestampedEntity<TId>, ITimestampedEntity<TId, TUserId>, IEquatable<IEntity<TId>>, IComparable<IEntity<TId>>
     where TId : IComparable, IEquatable<TId?>
 {
-    public new virtual ITimestamp<TUserId> Created { get => (this as IEntity).Created is ITimestamp<TUserId> ituid ? ituid : new Timestamp<TUserId> { By = default, When = (this as IEntity).Created.When, Details = (this as IEntity).Created.Details }; set => (this as IEntity).Created = value; }
-    public new virtual ITimestamp<TUserId> Updated { get => (this as IEntity).Created is ITimestamp<TUserId> ituid ? ituid : new Timestamp<TUserId> { By = default, When = (this as IEntity).Updated.When, Details = (this as IEntity).Updated.Details }; set => (this as IEntity).Updated = value; }
+    public new virtual ITimestamp<TUserId> Created { get => (this as ITimestampedEntity).Created is ITimestamp<TUserId> ituid ? ituid : new Timestamp<TUserId> { By = default, When = (this as ITimestampedEntity).Created.When, Details = (this as ITimestampedEntity).Created.Details }; set => (this as ITimestampedEntity).Created = value; }
+    public new virtual ITimestamp<TUserId> Updated { get => (this as ITimestampedEntity).Created is ITimestamp<TUserId> ituid ? ituid : new Timestamp<TUserId> { By = default, When = (this as ITimestampedEntity).Updated.When, Details = (this as ITimestampedEntity).Updated.Details }; set => (this as ITimestampedEntity).Updated = value; }
     public new virtual ITimestamp<TUserId>? Deleted
     {
-        get => (this as IEntity).Deleted == default ?
+        get => (this as ITimestampedEntity).Deleted == default ?
                 default :
-                (this as IEntity).Deleted is ITimestamp<TUserId> ituid ?
+                (this as ITimestampedEntity).Deleted is ITimestamp<TUserId> ituid ?
                 ituid :
-            new Timestamp<TUserId> { By = default, When = (this as IEntity).Deleted?.When ?? default, Details = (this as IEntity).Deleted.Details };
-        set => (this as IEntity).Deleted = value;
+            new Timestamp<TUserId> { By = default, When = (this as ITimestampedEntity).Deleted?.When ?? default, Details = (this as ITimestampedEntity).Deleted.Details };
+        set => (this as ITimestampedEntity).Deleted = value;
     }
 }

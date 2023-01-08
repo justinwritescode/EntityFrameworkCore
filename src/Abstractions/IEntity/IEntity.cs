@@ -12,6 +12,7 @@
 
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
 
+/// <summary>A base interface for database entities.</summary>
 public interface IEntity : IIdentifiable
 {
 }

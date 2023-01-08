@@ -6,7 +6,7 @@
  * 
  *   Author: Justin Chase <justin@justinwritescode.com>
  *   
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
@@ -19,9 +19,11 @@
     <PackageReference Include="System.Collections.Generic.Usings" />
     <PackageReference Include="System.ComponentModel.Usings" />
     <ProjectReference Include="../Abstractions/JustinWritesCode.EntityFrameworkCore.Abstractions.csproj" />
+    <!-- <PackageReference Include="System.Runtime" Condition="$(TargetFramework.Contains('netstandard'))" /> -->
   </ItemGroup>
   <ItemGroup>
     <Using Include="JustinWritesCode.EntityFrameworkCore.Abstractions" />
     <Using Include="JustinWritesCode.Abstractions" />
+    <Using Include="System.Runtime.CompilerServices" />
   </ItemGroup>
 </Project>
