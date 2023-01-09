@@ -11,9 +11,9 @@
  */
 
 namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
-using JustinWritesCode.Abstractions;
-    /// <inheritdoc cref="ITimestampedEntity" />
-    /// <typeparam name="TId"><inheritdoc cref="IEntity{TId}"/></typeparam>
-    public interface ITimestampedEntity<TId> : IEntity<TId>, ITimestampedEntity where TId : IComparable, IEquatable<TId>
+
+/// <inheritdoc cref="ITimestampedEntity" />
+/// <typeparam name="TId"><inheritdoc cref="IEntity{TId}"/></typeparam>
+public interface ITimestampedEntity<TId> : IEntity<TId>, ITimestampedEntity where TId : IComparable, IEquatable<TId>
 {
 }
