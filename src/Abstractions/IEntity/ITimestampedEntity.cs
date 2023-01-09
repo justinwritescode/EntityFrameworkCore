@@ -10,12 +10,10 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
 
-namespace JustinWritesCode.EntityFrameworkCore.Abstractions
+namespace JustinWritesCode.EntityFrameworkCore.Abstractions;
+/// <summary>
+/// An interface for an entity including timestamps for <see cref="ICreatable.Created"/>, <see cref="IUpdatable.Updated"/>, and <see cref="IDeletable.Deleted"/>
+/// </summary>
+public interface ITimestampedEntity : IEntity, ITimestampable
 {
-	/// <summary>
-	/// An interface for an entity including timestamps for <see cref="ICreatable.Created"/>, <see cref="IUpdatable.Updated"/>, and <see cref="IDeletable.Deleted"/>
-	/// </summary>
-	public interface ITimestampedEntity : IEntity, ITimestampable
-    {
-    }
 }
