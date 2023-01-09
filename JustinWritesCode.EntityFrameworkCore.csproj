@@ -11,15 +11,15 @@
 -->
 
 <Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="MetapackageSdk" />
   <PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>Abstractions and tools for EF Core</Description>
     <DocsDir>$(MSBuildProjectDirectory)/./docs</DocsDir>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./src/**/*.*proj" />
-    <Compile Remove="@(Compile)" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageTag Include="EntityFrameworkCore" />
