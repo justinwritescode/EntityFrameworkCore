@@ -41,6 +41,10 @@ public abstract class TimestampedEntity<TId, TUserId> : TimestampedEntity<TId>, 
                 (this as ITimestampedEntity).Deleted is ITimestamp<TUserId> ituid ?
                 ituid :
             new Timestamp<TUserId> { By = default, When = (this as ITimestampedEntity).Deleted?.When ?? default, Details = (this as ITimestampedEntity).Deleted.Details };
-        set => (this as ITimestampedEntity).Deleted = value;
+        set => (this as Abstractions.ITimestampedEntity).Deleted = value;
     }
+
+#if NETSTANDARD
+    public bool IsDeleted => /*Deleted?.When.HasValue && */Deleted.When < DateTimeOffset.UtcNow;
+#endif
 }
